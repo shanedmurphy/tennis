@@ -1,4 +1,4 @@
-import { GameResult, Playable } from './types';
+import { PointResult, Playable } from './types';
 
 export class DeuceSubgame implements Playable {
   private player1: string;
@@ -38,7 +38,7 @@ export class DeuceSubgame implements Playable {
     return this.scoreMap[`${this.player1Score}, ${this.player2Score}`];
   }
 
-  public pointWonBy(player: string): GameResult {
+  public pointWonBy(player: string): PointResult {
     if (player === this.player1) {
       switch (this.score()) {
         case 'Deuce':

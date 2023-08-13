@@ -1,4 +1,4 @@
-import { GameResult, Playable } from './types';
+import { PointResult, Playable } from './types';
 
 export class TiebreakGame implements Playable {
   private player1: string;
@@ -22,7 +22,7 @@ export class TiebreakGame implements Playable {
     return `${this.player1Score}-${this.player2Score}`;
   }
 
-  public pointWonBy(player: string): GameResult {
+  public pointWonBy(player: string): PointResult {
     if (player === this.player1) {
       this.player1Score += 1;
       if (

@@ -1,8 +1,8 @@
 export interface Playable {
-  pointWonBy(player: string): GameResult;
+  pointWonBy(player: string): PointResult;
   score(): string;
 }
 
-export type GameResult = {
+export type PointResult = {
   winner?: string;
 };

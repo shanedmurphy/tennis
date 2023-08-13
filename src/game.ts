@@ -1,5 +1,5 @@
 import { DeuceSubgame } from './deuceSubgame';
-import { GameResult, Playable } from './types';
+import { PointResult, Playable } from './types';
 
 export class Game implements Playable {
   private player1: string;
@@ -49,7 +49,7 @@ export class Game implements Playable {
     }
   }
 
-  public pointWonBy(player: string): GameResult {
+  public pointWonBy(player: string): PointResult {
     if (this.deuceGame !== undefined) {
       const result = this.deuceGame?.pointWonBy(player);
       if (result.winner === undefined) {

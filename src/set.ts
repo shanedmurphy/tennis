@@ -1,6 +1,6 @@
 import { Game } from './game';
 import { TiebreakGame } from './tiebreakGame';
-import { GameResult, Playable } from './types';
+import { PointResult, Playable } from './types';
 
 export class Set implements Playable {
   private player1: string;
@@ -33,7 +33,7 @@ export class Set implements Playable {
     return `${this.player1Score}-${this.player2Score}, ${this.game.score()}`;
   }
 
-  public pointWonBy(player: string): GameResult {
+  public pointWonBy(player: string): PointResult {
     const gameResult = this.game.pointWonBy(player);
     if (gameResult.winner === undefined) {
       return {};
